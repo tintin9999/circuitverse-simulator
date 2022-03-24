@@ -100,7 +100,7 @@ export default class AndGate extends CircuitElement {
             return;
         }
         for (let i = 1; i < this.inputSize; i++)
-            result &= this.inp[i].value || 0;
+            result |= this.inp[i].value || 0;
         this.output1.value = result >>> 0;
         simulationArea.simulationQueue.add(this.output1);
     }
