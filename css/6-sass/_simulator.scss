@@ -39,3 +39,26 @@ $fa-font-path: '../node_modules/@fortawesome/fontawesome-free/webfonts';
 .report-sidebar a:hover {
   right: 0;
 }
+
+
+.change-version-bar a {   
+  color: $white;
+  font-size: 13px;
+  padding: 10px;
+  position: fixed;
+  right: -119px;
+  text-decoration: none;
+  bottom: 60px;
+  transition: .3s;
+  width: 160px;
+  z-index: 999;
+}
+
+.change-version-bar span {
+  font-size: 1.2em;
+  padding-right: 20px;
+}
+
+.change-version-bar a:hover {
+  right: 0;
+}

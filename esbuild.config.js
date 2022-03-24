@@ -1,12 +1,13 @@
 const path = require('path');
 const sassPlugin = require('esbuild-plugin-sass');
+const pkg = require('./package.json');
 
 require('esbuild')
   .build({
-    entryPoints: ['app.js'],
+    entryPoints: ['app.js', 'versionHandler.js'],
     color: true,
     bundle: true,
-    outdir: path.join(process.cwd(), 'build'),
+    outdir: path.join(process.cwd(), 'build', `v${pkg.version}`),
     absWorkingDir: path.join(process.cwd(), 'src'),
     sourcemap: true,
     watch: process.argv.includes('--watch'),

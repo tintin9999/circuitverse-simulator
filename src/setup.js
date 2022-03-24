@@ -26,7 +26,7 @@ import 'codemirror/addon/hint/show-hint';
 import { setupCodeMirrorEnvironment } from './Verilog2CV';
 import { keyBinder } from './hotkey_binder/keyBinder';
 import metadata from './metadata';
-
+import './versionHandler';
 window.metadata = metadata;
 
 window.width = undefined;
