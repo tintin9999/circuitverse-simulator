@@ -12,9 +12,6 @@
   <link rel="stylesheet" href="node_modules/jquery-ui-dist/jquery-ui.min.css">
   </link>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-  <script src="build/app.js"></script>
-  <link rel="stylesheet" href="build/app.css"></link>
 </head>
 
 <body>
@@ -636,6 +633,11 @@
     </div>
   </div>
 
+  <div class="change-version-bar" id="cv-cv">
+    <a type="button" class="btn btn-primary text-light">
+      <span class="fa fa-code-fork"></span>&nbsp;&nbsp;Change Version</a>
+  </div>
+
   <script>
     const embed = false;
     user_id = "Guest user";
@@ -668,6 +670,8 @@
       window.location.href = window.location.href.replace("/simulator", "/simulator_old")
     }
   </script>
+
+  <script src="build/v1.0.0/versionHandler.js"></script>
 </body>
 
 </html>
