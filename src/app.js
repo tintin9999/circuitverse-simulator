@@ -4,6 +4,8 @@ import Array from './arrayHelpers';
 import '../css/main.stylesheet.css';
 import '../css/main.stylesheet.scss';
 
+import 'bootstrap';
+
 document.addEventListener('DOMContentLoaded', () => {
   setup();
   var js = {
