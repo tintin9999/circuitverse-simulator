@@ -97,8 +97,11 @@ export function dots(dots = true, transparentBackground = false, force = false) 
     var ox = globalScope.ox % scale; // offset
     var oy = globalScope.oy % scale; // offset
 
-    document.getElementById('backgroundArea').style.left = (ox - scale) / DPR;
-    document.getElementById('backgroundArea').style.top = (oy - scale) / DPR;
+    if (backgroundArea.canvas) {
+        backgroundArea.canvas.style.left = `${(ox - scale) / DPR}px`;
+        backgroundArea.canvas.style.top = `${(oy - scale) / DPR}px`;
+    }
+
     if (globalScope.scale === simulationArea.prevScale && !force) return;
 
     if (!backgroundArea.context) return;
